@@ -1,14 +1,14 @@
 const express = require('express');
 const passport = require('passport');
-const connectDB = require('./config/database');
-const otpRoutes = require('./routes/otpRoutes');
-const testingRoutes = require('./routes/testing');
+const connectDB = require('../src/config/database');
+const otpRoutes = require('../src/routes/otpRoutes');
+const testingRoutes = require('../src/routes/testing');
 const multer = require('multer');
-const Post = require('./models/post');
+const Post = require('../src/models/post');
 const fs = require('fs');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 var cors=require('cors');
-require('./utils/passport');
+require('../src/utils/passport');
 
 const app = express();
 app.use(cors());
